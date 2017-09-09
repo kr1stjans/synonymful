@@ -32,11 +32,11 @@
 
     <h5>Download for:</h5>
     <div class="downloads">
-        <a id="mac" href="https://www.dropbox.com/s/idkg39nw70n285v/Synonymful_Mac.zip?dl=1" class="btn btn-primary">Mac
+        <a id="mac" href="https://www.dropbox.com/s/idkg39nw70n285v/Synonymful_Mac.zip?dl=1" class="btn btn-primary" onclick="ga('send', 'pageview', '/downloadMac');">Mac
             OS X</a>
         <a id="windows" href="https://www.dropbox.com/s/9o1el129z0fyzvq/Synonymful-Windows.zip?dl=1"
-           class="btn btn-primary">Windows</a>
-        <a id="ubuntu" href="https://www.dropbox.com/s/3hrsjxcwwjxqnqe/Synonymful-Linux.zip?dl=1"
+           onclick="ga('send', 'pageview', '/downloadWindows');" class="btn btn-primary">Windows</a>
+        <a id="ubuntu" onclick="ga('send', 'pageview', '/downloadUbuntu');" href="https://www.dropbox.com/s/3hrsjxcwwjxqnqe/Synonymful-Linux.zip?dl=1"
            class="btn btn-primary">Linux / Ubuntu</a>
     </div>
     <div style="margin-top: 25px;">Support at <a href="mailto:ksimphony@gmail.com" style="border: 0;" target="_top">ksimphony@gmail.com</a>
@@ -52,6 +52,17 @@
 <!-- Javascripts
 ================================================== -->
 <script type="text/javascript" src="js/main.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-106176253-1', 'auto');
+    ga('send', 'pageview', '/');
+
+</script>
 
 </body>
 </html>

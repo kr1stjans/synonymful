@@ -3,7 +3,7 @@
     $version = isset($_GET["version"]) ? $_GET["version"] : "";
     $os = isset($_GET["os"]) ? $_GET["os"] : "";
 
-    if (!isset($version) || !isset($os) || strlen($version) <= 0 || $version == $currentVersion) {
+    if (!isset($version) || !isset($os) || strlen($version) <= 0 || strlen($os) <= 0 || $version == $currentVersion) {
         header("HTTP/1.1 204 NO CONTENT");
     } else {
         header('Content-type: application/json');

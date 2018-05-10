@@ -1,14 +1,14 @@
 <?php
-    $version = $_GET['version'];
-    $currentVersion = '1.0.0.';
+    $currentVersion = trim(file_get_contents('version.txt'));
+    $version = isset($_GET["version"]) ? $_GET["version"] : "";
 
     if (!isset($version) || strlen($version) <= 0 || $version == $currentVersion) {
         header("HTTP/1.1 204 NO CONTENT");
     } else {
-        $uri = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
         header('Content-type: application/json');
-        echo json_encode({
-            "url": $url,
-        });
+        $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        echo json_encode(array(
+            "url" => $actual_link,
+        ));
     }
 ?>

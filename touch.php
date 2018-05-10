@@ -6,9 +6,9 @@
         header("HTTP/1.1 204 NO CONTENT");
     } else {
         header('Content-type: application/json');
-        $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $actualLink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
         echo json_encode(array(
-            "url" => $actual_link,
+            "url" => $actualLink . "/latest/darwin/Synonymful.zip",
         ));
     }
 ?>

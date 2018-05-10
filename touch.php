@@ -11,6 +11,7 @@
         $latestPath = array(
             "darwin" => "/latest/darwin/Synonymful.zip",
             "linux" => "/latest/linux/Synonymful.zip",
+            "win32" => "/latest/win32/",
         );
         echo json_encode(array(
             "url" => $actualLink . $latestPath[$os],
